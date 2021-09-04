@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Trivia</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap">
+	</head>
+	<body>
+		<header>
+			<div class="logo">
+				<img src="./img/QUIZ-3D.png" width="90px">
+			</div>
+			<nav>
+				<div class="nav-links">
+					<ul>
+						<li class="nav-link"><a href="#">Leader Board</a></li>
+						<li class="nav-link"><a href="#">Create Quiz</a></li>
+						<li class="nav-link"><a href="#">Login</a></li>
+						<li class="nav-link"><a href="#">Register</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<main>
+			<div class="main-head">
+				<h1 style="font-size: 10vh">Let's Play</h1>	
+			</div>
+			<div class="difficulty">
+				<h3>Difficulty Level</h3>
+				<input type="radio" name="diff" value="easy" onclick="setDifficulty(this.value)">
+				<label for="easy">Easy</label>
+				<input type="radio" name="diff" value="medium" id="diff" onclick="setDifficulty(this.value)">
+				<label for="medium">Medium</label>
+				<input type="radio" name="diff" value="hard" id="diff" onclick="setDifficulty(this.value)">
+				<label for="hard">Hard</label>
+			</div>
+			<div class="no-of-quetions">
+				<h3>Number Of Quetions</h3>
+				<h3 id="counter">5</h3>
+				<button id="dec">Decrement</button>
+				<button id="inc">Increment</button>
+				<h3>Select A Catagory</h3>
+			</div>
+			<div class="categories">
+				<div class="catagory 9">
+					<h4>General Knowledge</h4>
+				</div>
+				<div class="catagory 19">
+					<h4>Mathematics</h4>
+				</div>
+				<div class="catagory 21">
+					<h4>Sports</h4>
+				</div>
+				<div class="catagory 18">
+					<h4>Computers</h4>
+				</div>
+				<div class="catagory 11">
+					<h4>Films</h4> 
+				</div>
+				<div class="catagory 12">
+					<h4>Music</h4>
+				</div>
+				<div class="catagory 25">
+					<h4>Art</h4>
+				</div>
+				<div class="catagory 24">
+					<h4>Politics</h4>
+				</div>
+			</div>
+		</main>
+	<script type="text/javascript" src="script.js"></script>
+	</body>
+</html>
