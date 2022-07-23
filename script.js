@@ -2,11 +2,12 @@
 var i = 5;
 const incBtn = document.getElementById('inc');
 const decBtn = document.getElementById('dec');
+
 incBtn.addEventListener("click",function(){
 	if(i<10){
 		enablebtn(decBtn);
 		i++;
-		document.getElementById('counter').innerText = i;
+		document.getElementById('counter').innerText = "Number Of Quetions : " + i;
 	}
 	else{
 		disablebtn(incBtn);
@@ -16,7 +17,7 @@ decBtn.addEventListener("click",function(){
 	if(i>1){
 		enablebtn(incBtn);
 		i--;
-		document.getElementById('counter').innerText = i;
+		document.getElementById('counter').innerText = "Number Of Quetions : " + i;
 	}
 	else{
 		disablebtn(decBtn);
@@ -24,18 +25,21 @@ decBtn.addEventListener("click",function(){
 });
 
 function disablebtn(Btn){
-	Btn.style.backgroundColor = 'gray';
+	Btn.style.backgroundColor = 'red';
 	Btn.style.cursor = 'arrow';
 }
 function enablebtn(Btn){
-	Btn.style.backgroundColor = 'yellow';
+	Btn.style.backgroundColor = 'skyblue';
 	Btn.style.cursor = 'pointer';	
 }
+
 //Difficulty
 var difficulty = 'easy';
 function setDifficulty(difficultyValue){
 	difficulty = difficultyValue;
+	console.log(difficulty);
 }
+
 //Catagory
 var cataSelected;
 var Catagory = document.querySelectorAll('.catagory');
@@ -48,6 +52,5 @@ Catagory.forEach(function(cata){
 		localStorage.setItem('Difficulty',difficulty);
 		localStorage.setItem('Catagory',cataSelected);
 		location.href = "./startquiz.html";
-		
 	});
 });
