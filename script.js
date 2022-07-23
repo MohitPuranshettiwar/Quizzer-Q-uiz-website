@@ -2,6 +2,7 @@
 var i = 5;
 const incBtn = document.getElementById('inc');
 const decBtn = document.getElementById('dec');
+
 incBtn.addEventListener("click",function(){
 	if(i<10){
 		enablebtn(decBtn);
@@ -31,11 +32,14 @@ function enablebtn(Btn){
 	Btn.style.backgroundColor = 'skyblue';
 	Btn.style.cursor = 'pointer';	
 }
+
 //Difficulty
 var difficulty = 'easy';
 function setDifficulty(difficultyValue){
 	difficulty = difficultyValue;
+	console.log(difficulty);
 }
+
 //Catagory
 var cataSelected;
 var Catagory = document.querySelectorAll('.catagory');
@@ -48,6 +52,5 @@ Catagory.forEach(function(cata){
 		localStorage.setItem('Difficulty',difficulty);
 		localStorage.setItem('Catagory',cataSelected);
 		location.href = "./startquiz.html";
-		
 	});
 });
