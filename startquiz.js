@@ -9,6 +9,7 @@ var Catagory = localStorage.getItem('Catagory');
 console.log(options);
 
 var xhr = new XMLHttpRequest();
+
 xhr.open('GET','https://opentdb.com/api.php?amount='+Quetions+'&category='+Catagory+'&difficulty='+Difficulty+'&type=multiple',true);
 
 xhr.onload = function(){
