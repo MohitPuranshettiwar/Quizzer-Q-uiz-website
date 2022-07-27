@@ -66,6 +66,7 @@ function setQuetion(result,i){
 		});
 	}
 	else{
-		
+		localStorage.setItem('score',score);
+		location.href = "./result.html";
 	}
 }
