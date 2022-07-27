@@ -6,6 +6,7 @@ var liveScore = document.getElementById('score');
 var Quetions = localStorage.getItem('Quetions');
 var Difficulty = localStorage.getItem('Difficulty');
 var Catagory = localStorage.getItem('Catagory');
+
 console.log(options);
 
 var xhr = new XMLHttpRequest();
