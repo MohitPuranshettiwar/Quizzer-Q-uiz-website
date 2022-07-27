@@ -3,6 +3,7 @@ var i = 5;
 const increment = document.getElementById('inc');
 const decrement = document.getElementById('dec');
 const counter = document.getElementById('counter');
+const allCatagory = document.getElementsByClassName("catagory");
 
 function dec(){
 	if(i>1){
@@ -45,10 +46,5 @@ function setDifficulty(DifficultyValue){
 var Catagory = '18';
 function setCatagory(CatagoryValue){
 	Catagory = CatagoryValue;
-	check_catagory();
-}
-const all_catagory = document.getElementsByClassName("catagory"); 
-function check_catagory(){
-	all_catagory.style.color = "pink";
 }
 
