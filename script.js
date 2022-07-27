@@ -2,12 +2,12 @@
 var i = 5;
 const incBtn = document.getElementById('inc');
 const decBtn = document.getElementById('dec');
-
+const counter = document.getElementById('counter');
 incBtn.addEventListener("click",function(){
 	if(i<10){
 		enablebtn(decBtn);
 		i++;
-		document.getElementById('counter').innerText = "Number Of Quetions : " + i;
+		counter.innerText = "Number Of Quetions : " + i;
 	}
 	else{
 		disablebtn(incBtn);
@@ -17,7 +17,7 @@ decBtn.addEventListener("click",function(){
 	if(i>1){
 		enablebtn(incBtn);
 		i--;
-		document.getElementById('counter').innerText = "Number Of Quetions : " + i;
+		counter.innerText = "Number Of Quetions : " + i;
 	}
 	else{
 		disablebtn(decBtn);
