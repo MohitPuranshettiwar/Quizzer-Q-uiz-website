@@ -31,16 +31,24 @@ function check_btn(){
 		increment.style.background = "skyblue";
 		decrement.style.background = "skyblue";
 	}
+	console.log("i = " + i);
 }
 
+//set difficulty
 var difficulty = 'easy';
-function set_diffi(DifficultyValue){
+function setDifficulty(DifficultyValue){
 	difficulty = DifficultyValue;
+	console.log(difficulty);
 }
 
+//set catagory
 var Catagory = '18';
 function setCatagory(CatagoryValue){
 	Catagory = CatagoryValue;
 	check_catagory();
+}
+const all_catagory = document.getElementsByClassName("catagory"); 
+function check_catagory(){
+	all_catagory.style.color = "pink";
 }
 
