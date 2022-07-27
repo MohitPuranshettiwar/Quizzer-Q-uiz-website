@@ -35,16 +35,23 @@ function check_btn(){
 	console.log("i = " + i);
 }
 
-//set difficulty
-var difficulty = 'easy';
+//set Difficulty
+var Difficulty = 'easy';
 function setDifficulty(DifficultyValue){
-	difficulty = DifficultyValue;
-	console.log(difficulty);
+	Difficulty = DifficultyValue;
+	console.log(Difficulty);
 }
 
 //set catagory
 var Catagory = '18';
 function setCatagory(CatagoryValue){
 	Catagory = CatagoryValue;
+	console.log(Catagory);
 }
 
+function start_quiz(){
+	localStorage.setItem('Quetions',i);
+	localStorage.setItem('Difficulty',Difficulty);
+	localStorage.setItem('Catagory',Catagory);
+	location.href = "./startquiz.html";
+}

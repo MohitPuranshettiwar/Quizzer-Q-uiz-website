@@ -105,11 +105,10 @@ h2{
 	text-align: center;
 	text-decoration:none;
 	font-size: 3vh;
-	justify-content: center;
-	align-content: center;
 	font-weight: 700;
 	box-shadow:  0.4vh 0.4vh 0.4vh  rgb(0, 0, 0);
 	cursor: pointer;
+	margin-left: 45%;
 }
 button:focus{
 	background-color: rgb(0, 0, 0);
