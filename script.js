@@ -33,3 +33,14 @@ function check_btn(){
 	}
 }
 
+var difficulty = 'easy';
+function set_diffi(DifficultyValue){
+	difficulty = DifficultyValue;
+}
+
+var Catagory = '18';
+function setCatagory(CatagoryValue){
+	Catagory = CatagoryValue;
+	check_catagory();
+}
+

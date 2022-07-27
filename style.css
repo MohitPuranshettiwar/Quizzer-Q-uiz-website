@@ -82,7 +82,7 @@ main{
 	flex-flow: row wrap;
 }
 .catagory{
-	background-color: rgb(122, 176, 230);
+	background-color: skyblue;
 	margin:2%;
 	padding: 2vh;
 	border-radius: 2vh;
