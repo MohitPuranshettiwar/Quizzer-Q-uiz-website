@@ -3,34 +3,28 @@ var options = document.getElementsByClassName('option');
 var nextBtn = document.getElementById('next-btn');
 var score = 0;
 var liveScore = document.getElementById('score');
+console.log(options);
 var Quetions = localStorage.getItem('Quetions');
 var Difficulty = localStorage.getItem('Difficulty');
 var Catagory = localStorage.getItem('Catagory');
-
-console.log(options);
-
 var xhr = new XMLHttpRequest();
-
 xhr.open('GET','https://opentdb.com/api.php?amount='+Quetions+'&category='+Catagory+'&difficulty='+Difficulty+'&type=multiple',true);
-
 xhr.onload = function(){
 	if(this.status == 200){
 		console.log((this.responseText));
-		Response(JSON.parse(this.responseText)); // whats this
+		Response(JSON.parse(this.responseText));
+		
 	}
 }
-
 xhr.send();
-
 function Response(result){
 	var i = 0;
 	setQuetion(result,i);
 }
-
 function setQuetion(result,i){
 	if(i<Quetions){
 		for(var opt of options){
-			opt.style.background= 'orange';
+			opt.style.backgroundColor = 'orange';
 		}
 		head.innerHTML = result.results[i].question;
 		correct = Math.floor(Math.random()*4);
@@ -63,12 +57,7 @@ function setQuetion(result,i){
 		nextBtn.addEventListener('click',function(){
 			i++;
 			setQuetion(result,i);
-			options.style.backgroundColor = 'black';
-			console.log(i);
 		});
-	}
-	else{
-		localStorage.setItem('score',score);
-		location.href = "./result.html";
+
 	}
 }
