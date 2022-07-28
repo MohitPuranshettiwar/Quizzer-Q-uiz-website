@@ -39,10 +39,11 @@ main{
 	font-size: 20px;
 	font-weight: 900;
 	border-radius:5px;
+	background-color: rgb(254, 93, 0);
 }
 .option:hover{
 	cursor: pointer;
-
+	background-color: rgb(149, 32, 0);
 }
 .next{
 	display: flex;
