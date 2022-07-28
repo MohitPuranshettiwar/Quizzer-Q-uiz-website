@@ -39,58 +39,67 @@ function setQuetion(result,i){
 				k++;	
 			}
 		}
-	}
-	if(counter == 1){
-		i = i + 1;
-		setQuetion(result,i);
+		nextBtn.addEventListener('click',function(){
+			i++;
+			counter = 0;
+			check_opt();
+			setQuetion(result,i);
+		});
 	}
 }
 function opt1(){
-	if(options[correct] == 0){
+	if(options[correct] == 0 && counter == 0){
 		option1.style.backgroundColor = 'green';
 		score = score + 5;
 		console.log(score);
 		liveScore.innerHTML = '<h1>Score: '+score+'</h1>';
 	}
-	else{
+	else if(counter == 0){
 		option1.style.backgroundColor = 'red';
 		console.log(score);
 	}
 	setTimeout(function(){ options[correct].style.backgroundColor = 'green';},50);
+	counter++;
 }
 function opt2(){
-	if(options[correct] == 1){
+	if(options[correct] == 1 && counter == 0){
 		option2.style.backgroundColor = 'green';
 		score = score + 5;
 		liveScore.innerHTML = '<h1>Score: '+score+'</h1>';
 	}
-	else{
+	else if(counter == 0){
 		option2.style.backgroundColor = 'red';
 	}
 	setTimeout(function(){ options[correct].style.backgroundColor = 'green';},50);
+	counter++;
 }
 function opt3(){
-	if(options[correct] == 2){
+	if(options[correct] == 2 && counter == 0){
 		option3.style.backgroundColor = 'green';
 		score = score + 5;
 		liveScore.innerHTML = '<h1>Score: '+score+'</h1>';
 	}
-	else{
+	else if(counter == 0){
 		option3.style.backgroundColor = 'red';
 	}
 	setTimeout(function(){ options[correct].style.backgroundColor = 'green';},50);
+	counter++;
 }
 function opt4(){
-	if(options[correct] == 3){
+	if(options[correct] == 3 && counter == 0){
 		option4.style.backgroundColor = 'green';
 		score = score + 5;
 		liveScore.innerHTML = '<h1>Score: '+score+'</h1>';
 	}
-	else{
+	else if(counter == 0){
 		option4.style.backgroundColor = 'red';
 	}
 	setTimeout(function(){ options[correct].style.backgroundColor = 'green';},50);
+	counter++;
 }
-function next_api(){
-	counter = 1;
+function check_opt(){
+	option1.style.backgroundColor = 'orangered';
+	option2.style.backgroundColor = 'orangered';
+	option3.style.backgroundColor = 'orangered';
+	option4.style.backgroundColor = 'orangered';
 }
