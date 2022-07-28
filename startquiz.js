@@ -6,6 +6,8 @@ var option1 = document.getElementById('A');
 var option2 = document.getElementById('B');
 var option3 = document.getElementById('C');
 var option4 = document.getElementById('D');
+var i = 0;
+var counter = 0;
 
 var Quetions = localStorage.getItem('Quetions');
 var Difficulty = localStorage.getItem('Difficulty');
@@ -16,13 +18,11 @@ var xhr = new XMLHttpRequest();
 xhr.open('GET','https://opentdb.com/api.php?amount='+Quetions+'&category='+Catagory+'&difficulty='+Difficulty+'&type=multiple',true);
 xhr.onload = function(){
 	if(this.status == 200){
-		console.log((this.responseText));
 		Response(JSON.parse(this.responseText));
 	}
 }
 xhr.send();
 function Response(result){
-	var i = 0;
 	setQuetion(result,i);
 }
 function setQuetion(result,i){
@@ -40,30 +40,57 @@ function setQuetion(result,i){
 			}
 		}
 	}
+	if(counter == 1){
+		i = i + 1;
+		setQuetion(result,i);
+	}
 }
 function opt1(){
 	if(options[correct] == 0){
 		option1.style.backgroundColor = 'green';
-		score += 5;
-		liveScore.innerHTML = '<h1>Score:'+score+'</h1>';
+		score = score + 5;
+		console.log(score);
+		liveScore.innerHTML = '<h1>Score: '+score+'</h1>';
 	}
 	else{
 		option1.style.backgroundColor = 'red';
+		console.log(score);
 	}
 	setTimeout(function(){ options[correct].style.backgroundColor = 'green';},50);
 }
 function opt2(){
 	if(options[correct] == 1){
 		option2.style.backgroundColor = 'green';
-		score += 5;
-		liveScore.innerHTML = '<h1>Score:'+score+'</h1>';
+		score = score + 5;
+		liveScore.innerHTML = '<h1>Score: '+score+'</h1>';
 	}
 	else{
 		option2.style.backgroundColor = 'red';
 	}
 	setTimeout(function(){ options[correct].style.backgroundColor = 'green';},50);
 }
-function next(){
-	i++;
-	setQuetion(result,i);
-};
+function opt3(){
+	if(options[correct] == 2){
+		option3.style.backgroundColor = 'green';
+		score = score + 5;
+		liveScore.innerHTML = '<h1>Score: '+score+'</h1>';
+	}
+	else{
+		option3.style.backgroundColor = 'red';
+	}
+	setTimeout(function(){ options[correct].style.backgroundColor = 'green';},50);
+}
+function opt4(){
+	if(options[correct] == 3){
+		option4.style.backgroundColor = 'green';
+		score = score + 5;
+		liveScore.innerHTML = '<h1>Score: '+score+'</h1>';
+	}
+	else{
+		option4.style.backgroundColor = 'red';
+	}
+	setTimeout(function(){ options[correct].style.backgroundColor = 'green';},50);
+}
+function next_api(){
+	counter = 1;
+}
