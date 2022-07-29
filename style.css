@@ -2,6 +2,7 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	text-shadow: 1px 1px 1px rgb(0, 0, 0);
 }
 body{
 	font-family: 'poppins',sans-serif;
@@ -30,10 +31,9 @@ header{
 }
 a{
 	text-decoration: none;
-	color: #ffac4a;
+	color: #ff4c16;
 	font-weight: 600;
 	padding-right: 5vh;
-	text-shadow: 0.2vh 0.2vh 0.2vh  rgb(0, 0, 0);
 }
 .logo{
 	flex:1;
@@ -52,7 +52,6 @@ main{
 	text-align: center;
 	color: #f45d21;
 	font-weight: 900;
-	text-shadow: 0.2vh 0.2vh 0.2vh  rgb(0, 0, 0);
 }
 .difficulty,.no-of-quetions{
 	text-align: center;
@@ -62,7 +61,6 @@ main{
 }
 .difficulty h3,.no-of-quetions h3,h2{
 	color: #e66d39;
-	text-shadow: 0.4vh 0.4vh 0.4vh  rgb(0, 0, 0);
 	font-weight: 500;
 	padding: 1vh;
 	font-size: 4vh;
@@ -71,10 +69,10 @@ main{
 	background-color: skyblue;
 	border-radius: 2vh;
 	color:black;
-	padding: 2vh 3vh;
+	padding: 1vh 2vh;
 	text-align: center;
 	text-decoration:none;
-	font-size: 2vh;
+	font-size: 3vh;
 }
 .categories{
 	display: flex;
@@ -83,15 +81,16 @@ main{
 }
 .catagory{
 	background-color: skyblue;
-	margin:2%;
+	margin:1.7%;
 	padding: 2vh;
 	border-radius: 2vh;
 	cursor: pointer;
 	box-shadow: 0.4vh 0.4vh 0.4vh  rgb(0, 0, 0);
+	color: rgb(0, 21, 113);
+	font-size: 3vh;
 }
 label{
 	color: #e6da39;
-	text-shadow: 0.4vh 0.4vh 0.4vh  rgb(0, 0, 0);
 }
 h2{
 	color: rgb(255, 237, 38);
