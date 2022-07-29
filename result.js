@@ -1,5 +1,4 @@
 const result = document.getElementById("result");
-
 var score = localStorage.getItem("score");
 
 if(score % 5 == 0){
