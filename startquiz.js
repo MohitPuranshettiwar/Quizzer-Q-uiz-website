@@ -58,7 +58,7 @@ function opt1(){
 	}
 	else if(counter == 0){
 		option1.style.backgroundColor = 'red';
-		setTimeout(function(){ options[correct].style.backgroundColor = 'green';},500000);
+		setTimeout(function(){ options[correct].style.backgroundColor = 'green';},500);
 	}
 	counter = 1;
 }
@@ -69,7 +69,7 @@ function opt2(){
 	}
 	else if(counter == 0){
 		option2.style.backgroundColor = 'red';
-		setTimeout(function(){ options[correct].style.backgroundColor = 'green';},500000);
+		setTimeout(function(){ options[correct].style.backgroundColor = 'green';},500);
 	}
 	counter = 1;
 }
@@ -80,7 +80,7 @@ function opt3(){
 	}
 	else if(counter == 0){
 		option3.style.backgroundColor = 'red';
-		setTimeout(function(){ options[correct].style.backgroundColor = 'green';},500000);
+		setTimeout(function(){ options[correct].style.backgroundColor = 'green';},500);
 	}
 	counter = 1;
 }
@@ -91,7 +91,7 @@ function opt4(){
 	}
 	else if(counter == 0){
 		option4.style.backgroundColor = 'red';
-		setTimeout(function(){ options[correct].style.backgroundColor = 'green';},50000);
+		setTimeout(function(){ options[correct].style.backgroundColor = 'green';},500);
 	}
 	counter = 1;
 }
