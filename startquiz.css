@@ -4,7 +4,7 @@
 	box-sizing: border-box;
 }
 body{
-	background-color: orange;
+	background-color: rgb(0, 0, 0);
 	font-family: 'poppins',sans-serif;
 }
 main{
@@ -15,6 +15,7 @@ main{
 	position: absolute;
 	right: 0;
 	top: 0;
+	color: aliceblue;
 }
 #head{
 	color: white;
@@ -38,10 +39,11 @@ main{
 	font-size: 20px;
 	font-weight: 900;
 	border-radius:5px;
+	background-color: orange;
 }
 .option:hover{
 	cursor: pointer;
-
+	background-color: rgb(149, 32, 0);
 }
 .next{
 	display: flex;
@@ -49,6 +51,10 @@ main{
 }
 #next-btn{
 	width: 80px;
-	height: 35px;
+	height: 40px;
 	background-color: green;
+	font-size: 20px;
+}
+#next-btn:hover{
+	cursor: pointer;
 }
